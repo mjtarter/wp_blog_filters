@@ -1,5 +1,6 @@
 <div class="container blog-archive">
 	<div class="row">
+		<!-- Display a list of all post categories -->
 		<?php $categories = get_categories(); ?>
 		<ul class="cat-list">
 			<li class="category-all-filter">All</li>
@@ -22,12 +23,13 @@
 
 		<?php
 			while($query->have_posts()) : $query->the_post();?>
+				<!-- Get the slug from each posts' categories and add them as class names to the post container -->
 				<?php
 				$categories = get_the_category();
 				$cat_slug = '';
 				if ( ! empty( $categories ) ) {
 					foreach ( $categories as $cat ) {
-				    	$cat_slug .= $cat->slug . ' ';
+				    		$cat_slug .= $cat->slug . ' ';
 				  	}
 				}
 				?>
