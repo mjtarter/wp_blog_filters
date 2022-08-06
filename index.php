@@ -60,8 +60,6 @@
 	</div>
 </div>
 
-<?php get_template_part( 'template-parts/content-cta-blog'); ?>
-
 <!-- Category Filtering Scripts -->
 <script>
 jQuery('.category-all-filter').click(function () {
